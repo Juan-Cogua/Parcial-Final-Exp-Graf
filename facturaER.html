@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf8">
+    <title>FACTURA DE VENTA - Papelería Don Hermes</title>
+    <link rel="stylesheet" href="facturaER.css">
+</head>
+<body>
+
+<header>
+    <div class="header-content">
+        <div class="info-empresa">
+            <h1>Papelería Don Hermes</h1>
+            <p>NIT: 123.456.789-0</p>
+            <p>Dirección: Carrera 1812-117-UPTC</p>
+            <p>Tel: 300-123-1234</p>
+        </div>
+        <div class="info-factura">
+            <h4>FACTURA DE VENTA</h4>
+            <p>N°: 0001</p>
+            <p>Fecha: 24/11/2025</p>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section class="datos-cliente">
+        <h3>Datos del Cliente</h3>
+        <div class="cliente-field">
+            <label for="nombreCliente">Nombre/Razón Social:</label>
+            <input type="text" id="nombreCliente" placeholder="Nombre del cliente" aria-required="true" required>
+        </div>
+        <div class="cliente-field">
+            <label for="documentoCliente">Documento/NIT:</label>
+            <input type="text" id="documentoCliente" placeholder="CC/NIT" aria-required="true" required>
+        </div>
+        <div class="cliente-field">
+            <label for="direccionCliente">Dirección:</label>
+            <input type="text" id="direccionCliente" placeholder="Dirección del cliente" aria-required="true" required>
+        </div>
+    </section>
+
+    <section class="registro-ventas">
+        <h3>Detalle de la Venta</h3>
+        <form id="formVenta"> 
+            <div>
+                <label for="cant">Cantidad:</label>
+                <input type="number" id="cant" placeholder="Cant" min="1" required>
+            </div>
+            <div>
+                <label for="detalle">Detalle del Producto:</label>
+                <input type="text" id="detalle" placeholder="Detalle" required>
+            </div>
+            <div>
+                <label for="valorUnidad">Valor Unidad:</label>
+                <input type="number" id="valorUnidad" placeholder="Valor unidad" min="0.01" step="0.01" required>
+            </div>
+            <div> 
+                <label for="valorTotalLinea">Valor total:</label>
+                <input type="text" id="valorTotalLinea" value="$0.00" readonly>
+            </div>
+        </form>
+
+        <table id="tablaVentas">
+            <thead>
+                <tr>
+                    <th>Cant</th>
+                    <th>Detalle</th>
+                    <th>Valor unidad</th>
+                    <th>Valor total</th>
+                    <th>Acción</th> 
+                </tr>
+            </thead>
+            <tbody>
+                </tbody>
+        </table>
+        
+        <div class="totales-resumen">
+            <div class="fila-total">
+                <span class="total-label">Subtotal</span>
+                <span id="subtotalVentas">$0</span>
+            </div>
+            <div class="fila-total">
+                <span class="total-label">IVA (19%)</span>
+                <span id="ivaVentas">$0</span>
+            </div>
+            <div class="fila-total total-pagar">
+                <span class="total-label">Total a pagar</span>
+                <span id="totalVentas">$0</span>
+            </div>
+        </div>
+
+        <div class="footer-venta">
+            <button type="submit" form="formVenta">Agregar Compra</button>
+        </div>
+        
+    </section>
+</main>
+
+<footer>
+    <p>Parcial - Papeleria Don Hermes</p>
+</footer>
+
+<script src="facturaER.js"></script>
+</body>
+</html>

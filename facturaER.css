@@ -1,0 +1,199 @@
+:root {
+    --color-fondo: #f4f4f4;
+    --color-texto: #333;
+    --color-primario: #007bff;
+    --color-secundario: #e9ecef;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--color-fondo);
+    color: var(--color-texto);
+    margin: 0;
+    padding: 20px;
+}
+
+h1, h3, h4 {
+    text-align: left;
+    color: var(--color-primario);
+}
+
+header {
+    margin-bottom: 20px;
+    padding: 10px 0;
+    border-bottom: 2px solid var(--color-primario);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 0px;
+}
+
+.info-empresa h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.info-empresa p {
+    margin: 2px 0;
+    font-size: 14px;
+    color: var(--color-texto);
+}
+
+.info-factura {
+    text-align: right;
+}
+
+.info-factura h4 {
+    font-size: 16px;
+    color: var(--color-texto);
+    font-weight: bold;
+    margin: 0 0 5px 0;
+}
+
+.info-factura p {
+    margin: 2px 0;
+    font-size: 14px;
+    color: var(--color-texto);
+}
+
+.datos-cliente {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.datos-cliente h3 {
+    grid-column: 1 / -1;
+    margin-top: 0;
+}
+
+.cliente-field {
+    display: flex;
+    flex-direction: column;
+}
+
+
+#formVenta {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    align-items: stretch;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#formVenta div {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+label {
+    font-size: 14px;
+    margin-bottom: 3px;
+    font-weight: bold;
+}
+
+input {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[readonly] {
+    background-color: var(--color-secundario);
+    cursor: default;
+}
+
+input:focus, button:focus {
+    outline: 3px solid var(--color-primario);
+    outline-offset: 1px;
+}
+
+
+button {
+    background: var(--color-primario);
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.footer-venta {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 15px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+th {
+    background-color: var(--color-primario);
+    color: #fff;
+    font-weight: bold;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: var(--color-secundario);
+}
+
+.totales-resumen {
+    width: 300px;
+    margin-left: auto;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.fila-total {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    border-bottom: 1px dotted #ccc;
+}
+
+.fila-total:last-child {
+    border-bottom: none;
+}
+
+.total-pagar {
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 10px;
+    border-top: 2px solid var(--color-primario);
+}
+
+.btn-eliminar {
+    background: #dc3545;
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+.btn-eliminar:hover {
+    background: #c82333;
+}
